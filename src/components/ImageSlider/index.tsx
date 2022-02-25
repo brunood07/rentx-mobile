@@ -9,6 +9,7 @@ import {
 } from "./styles";
 
 interface Props {
+  id: string;
   imagesUrl: string[];
 }
 
