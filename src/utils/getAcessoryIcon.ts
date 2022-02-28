@@ -2,7 +2,7 @@ import SpeedSvg from "../assets/speed.svg";
 import AccelerationSvg from "../assets/acceleration.svg";
 import ForceSvg from "../assets/force.svg";
 import GasolineSvg from "../assets/gasoline.svg";
-import EnergySvg from "../asset/energy.svg"
+import EnergySvg from "../assets/energy.svg"
 import HybridSvg from "../assets/hybrid.svg";
 import ExchangeSvg from "../assets/exchange.svg";
 import PeopleSvg from "../assets/people.svg";
