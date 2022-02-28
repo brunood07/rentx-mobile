@@ -50,7 +50,7 @@ export function CarDetails() {
       </Header>
 
       <CarImages>
-        <ImageSlider imagesUrl={car.photos} />
+        {/* <ImageSlider imagesUrl={["car.photos", "car.photos"]} /> */}
       </CarImages>
 
       <Content>

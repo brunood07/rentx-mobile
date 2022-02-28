@@ -2,7 +2,7 @@ import React from "react";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
 import { useTheme } from "styled-components";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 import { Acessory } from "../../components/Acessory";
 import { BackButton } from "../../components/BackButton";
@@ -42,18 +42,28 @@ import {
   RentalPriceTotal,
 } from "./styles";
 
+interface Params {
+  car: CarDTO;
+}
+
 export function SchedulingDetails() {
   const navigation = useNavigation();
   const theme = useTheme();
+  const route = useRoute();
+  const { car } = route.params as Params;
 
   function handleConfirmRental() {
     navigation.navigate("SchedulingComplete");
   }
 
+  function handleBack() {
+    navigation.goBack();
+  }
+
   return (
     <Container>
       <Header>
-        <BackButton onPress={() => {}} />
+        <BackButton onPress={handleBack} />
       </Header>
 
       <CarImages>
