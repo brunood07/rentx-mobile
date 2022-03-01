@@ -1,4 +1,5 @@
 {
+  "name": "rentx",
   "expo": {
     "name": "rentx",
     "slug": "rentx",
@@ -7,5 +8,8 @@
       "**/*"
     ]
   },
-  "name": "rentx"
+  "splash": {
+    "image": "./assets/splash.png",
+    "backgroundColor": "#1B1B1F"
+  }
 }
