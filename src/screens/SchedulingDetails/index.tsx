@@ -73,7 +73,7 @@ export function SchedulingDetails() {
       ...dates,
     ];
 
-    await api.post(`schedules_byuser`, {
+    await api.post("schedules_byuser", {
       user_id: 1,
       car,
       startDate: format(getPlatformDate(new Date(dates[0])), "dd/MM/yyyy"),

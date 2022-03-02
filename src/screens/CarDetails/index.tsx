@@ -148,10 +148,7 @@ export function CarDetails() {
 const styles = StyleSheet.create({
   header: {
     position: "absolute",
-    overflw: "hidden",
-    zindex: 1,
-  },
-  back: {
-    marginTop: 24,
+    overflow: "hidden",
+    zIndex: 1,
   },
 });
