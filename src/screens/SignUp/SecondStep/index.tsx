@@ -43,7 +43,7 @@ export function SecondStep() {
           <SubTitle>Faça seu cadastro de{"\n"}forma rápida e fácil</SubTitle>
 
           <Form>
-            <FormTitle>1. Dados</FormTitle>
+            <FormTitle>2. Senha</FormTitle>
             <PasswordInput iconName="lock" placeholder="Senha" />
             <PasswordInput iconName="lock" placeholder="Repetir Senha" />
           </Form>
