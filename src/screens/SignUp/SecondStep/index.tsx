@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { useTheme } from "styled-components";
 
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
 import { Button } from "../../../components/Button";
-import { Input } from "../../../components/Input";
+import { PasswordInput } from "../../../components/PasswordInput";
 
 import {
   Container,
@@ -18,15 +19,12 @@ import {
 import { Keyboard, KeyboardAvoidingView } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-export function FirstStep() {
+export function SecondStep() {
   const navigation = useNavigation();
+  const theme = useTheme();
 
   function handleBack() {
     navigation.goBack();
-  }
-
-  function handleSecondStep() {
-    navigation.navigate("SecondStep");
   }
 
   return (
@@ -36,8 +34,8 @@ export function FirstStep() {
           <Header>
             <BackButton onPress={handleBack} />
             <BulletContainer>
-              <Bullet active={true} />
               <Bullet active={false} />
+              <Bullet active={true} />
             </BulletContainer>
           </Header>
 
@@ -46,20 +44,15 @@ export function FirstStep() {
 
           <Form>
             <FormTitle>1. Dados</FormTitle>
-            <Input iconName="user" placeholder="Nome" />
-            <Input
-              iconName="mail"
-              placeholder="E-mail"
-              keyboardType="email-address"
-            />
-            <Input
-              iconName="credit-card"
-              placeholder="CNH"
-              keyboardType="numeric"
-            />
+            <PasswordInput iconName="lock" placeholder="Senha" />
+            <PasswordInput iconName="lock" placeholder="Repetir Senha" />
           </Form>
 
-          <Button title="Próximo" onPress={handleSecondStep} />
+          <Button
+            title="Cadastrar"
+            color={theme.colors.success}
+            onPress={() => null}
+          />
         </Container>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
