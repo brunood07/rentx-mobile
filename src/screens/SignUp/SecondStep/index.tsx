@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useTheme } from "styled-components";
-import * as Yup from "yup";
 
+import { Confirmation } from "../../Confirmation";
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
 import { Button } from "../../../components/Button";
@@ -50,6 +50,12 @@ export function SecondStep() {
     if (password != passwordConfirm) {
       return Alert.alert("As senhas não são iguais");
     }
+
+    navigation.navigate("Confirmation", {
+      title: "Conta criada!",
+      message: `Agora é só fazer login\ne aproveitar.`,
+      nextScreenRoute: "SignIn",
+    });
   }
 
   return (
@@ -86,7 +92,7 @@ export function SecondStep() {
           <Button
             title="Cadastrar"
             color={theme.colors.success}
-            onPress={() => null}
+            onPress={handleRegister}
           />
         </Container>
       </TouchableWithoutFeedback>
