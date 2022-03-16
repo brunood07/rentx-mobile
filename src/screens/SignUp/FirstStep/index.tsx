@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as Yup from "yup";
+import { Alert, Keyboard, KeyboardAvoidingView } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+
+import { useAuth } from "../../../hooks/auth";
 
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
@@ -16,8 +20,6 @@ import {
   Form,
   FormTitle,
 } from "./styles";
-import { Alert, Keyboard, KeyboardAvoidingView } from "react-native";
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 export function FirstStep() {
   const [name, setName] = useState("");
@@ -25,6 +27,7 @@ export function FirstStep() {
   const [driverLicense, setDriverLicense] = useState("");
 
   const navigation = useNavigation();
+  const { user } = useAuth();
 
   function handleBack() {
     navigation.goBack();

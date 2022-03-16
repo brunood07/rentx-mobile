@@ -4,12 +4,13 @@ import { useTheme } from "styled-components";
 import { Alert, Keyboard, KeyboardAvoidingView } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
+import api from "../../../services/api";
+
 import { Confirmation } from "../../Confirmation";
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
 import { Button } from "../../../components/Button";
 import { PasswordInput } from "../../../components/PasswordInput";
-import api from "../../../services/api";
 
 import {
   Container,
