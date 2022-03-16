@@ -4,8 +4,6 @@ import * as Yup from "yup";
 import { Alert, Keyboard, KeyboardAvoidingView } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-import { useAuth } from "../../../hooks/auth";
-
 import { BackButton } from "../../../components/BackButton";
 import { Bullet } from "../../../components/Bullet";
 import { Button } from "../../../components/Button";
@@ -27,7 +25,6 @@ export function FirstStep() {
   const [driverLicense, setDriverLicense] = useState("");
 
   const navigation = useNavigation();
-  const { user } = useAuth();
 
   function handleBack() {
     navigation.goBack();
